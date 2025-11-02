@@ -17,11 +17,15 @@ start TEST.HTML
 ```
 Open browser console (F12) to see plagiarism logs.
 
-### Install Chrome Extension
-1. Go to `chrome://extensions/`
-2. Enable "Developer mode"
-3. Click "Load unpacked" → Select this folder
-4. Extension installed!
+### Installation Guid
+Clone the repository to you local machine, then follow the below steps
+
+1. Download Firefox browser
+2. 2. Go to about:debugging#/runtime/this-firefox
+3. Click on left side on "This FireFox"
+4. Then Click on Load Temporary Add ons
+5. Locate the directory and open manifest.json
+6. Extension will be loaded
 
 ## 📝 Testing Plagiarism
 
