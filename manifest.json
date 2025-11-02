@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "No-Nakal Exam Proctor",
+  "version": "1.0",
+  "description": "Exam invigilator extension for visual and audio monitoring.",
+
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"] 
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "default_title": "No-Nakal Proctor"
+  },
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "activeTab",
+    "unlimitedStorage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content-scripts/content.js"
+      ],
+      "css": [
+        "content-scripts/content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "109.0" 
+    }
+  }
+}

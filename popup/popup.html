@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>No-Nakal Proctor</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <button id="refreshButton" class="utility-button">Start New Session (Clear Data)</button>
+    
+    <h1>No-Nakal Invigilator</h1>
+
+    <div id="exam-form">
+        <label for="examCode">Exam Code:</label>
+        <input type="text" id="examCode" placeholder="Enter Exam Code" required>
+        
+        <label for="userID">User ID:</label>
+        <input type="text" id="userID" placeholder="Enter User ID" required>
+    </div>
+    
+    <p>Status: <span id="status">Ready</span></p>
+    <button id="startExamButton">Start Proctoring</button>
+    <p>Violations: <span id="violationCount">0</span> / <span id="maxViolations">99999</span></p>
+
+    <script src="popup.js"></script>
+</body>
+</html>

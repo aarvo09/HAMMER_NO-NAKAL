@@ -1,0 +1,44 @@
+#no-nakal-video {
+    position: fixed;
+    bottom: 20px; 
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    z-index: 100000;
+    border: 5px solid #4CAF50; /* Green Border */
+    border-radius: 50%; 
+    object-fit: cover; 
+    transition: border-color 0.3s ease-in-out;
+}
+
+#no-nakal-video.violation {
+    border-color: #ff4d4d; 
+}
+
+#no-nakal-blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Default: Dark, but neutral background when not active */
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    z-index: 2147483647;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    pointer-events: none; 
+    transition: opacity 0.3s;
+    opacity: 0; /* Hidden by default */
+}
+
+#no-nakal-blocker.active {
+    opacity: 1;
+    /* Color set by content.js for specific freeze state (Red for termination, Blue for scan) */
+    pointer-events: all;
+}
