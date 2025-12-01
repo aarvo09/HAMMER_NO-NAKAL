@@ -2,14 +2,14 @@
 
 Browser extension for monitoring online exams with plagiarism detection, face tracking, and activity monitoring.
 
-## 🎯 Features
+##  Features
 
-- ✅ **Plagiarism Detection** - Blocks submission if ≥10% similarity to Wikipedia  
-- 👤 **Face Tracking** - Monitors student presence via camera  
-- 📋 **Activity Logging** - Tracks copy/paste, tab switches, visibility changes  
-- 📝 **10 Questions** - 2 essays (plagiarism checked) + 8 multiple choice
+-  **Plagiarism Detection** - Blocks submission if ≥10% similarity to Wikipedia  
+-  **Face Tracking** - Monitors student presence via camera  
+-  **Activity Logging** - Tracks copy/paste, tab switches, visibility changes  
+-  **10 Questions** - 2 essays (plagiarism checked) + 8 multiple choice
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Test Exam Page (No Extension)
 ```powershell
@@ -27,35 +27,35 @@ Clone the repository to you local machine, then follow the below steps
 5. Locate the directory and open manifest.json
 6. Extension will be loaded
 
-## 📝 Testing Plagiarism
+##  Testing Plagiarism
 
 **Original content (PASS):**
 ```
 Learning requires dedication and effort to understand concepts through honest work.
 ```
-Result: ✓ 5-12% → Submitted
+Result: 5-12% -> Submitted
 
 **Wikipedia content (FAIL):**
 ```
 Academic integrity is the moral code of academia including avoidance of cheating and plagiarism.
 ```
-Result: ❌ 60-85% → Blocked
+Result: 60-85% -> Blocked
 
-## 🔧 Configuration
+##  Configuration
 
 Change plagiarism threshold in `TEST.HTML` (line ~410):
 ```javascript
 if (percent >= 10) {  // Change 10 to 5, 15, 20, etc.
 ```
 
-## 📊 How Plagiarism Works
+##  How Plagiarism Works
 
 1. Extracts keywords from student text
 2. Searches Wikipedia for related articles
 3. Counts matching words: `(matched / total) × 100`
 4. Blocks if ≥ 10%
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 | Issue | Fix |
 |-------|-----|
@@ -63,14 +63,14 @@ if (percent >= 10) {  // Change 10 to 5, 15, 20, etc.
 | Shows "Error" | Check internet connection |
 | Extension not working | Reload at `chrome://extensions/` |
 
-## � Key Files
+##  Key Files
 
 - `TEST.HTML` - Main exam page
 - `manifest.json` - Extension config
 - `monitoring/face-detection.js` - Camera monitoring
 - `plagarism/plagiarism_checker.js` - Node.js AI checker (optional)
 
-## 🤖 Advanced: AI Plagiarism Checker
+## Advanced: AI Plagiarism Checker
 
 For semantic analysis (more accurate):
 ```powershell
